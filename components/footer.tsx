@@ -101,7 +101,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/the-mac-3573a1375?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                     target="_blank"
                     className="text-white/45 hover:text-teal-500 font-light transition-colors duration-300 text-sm flex items-center gap-3 group"
                   >
