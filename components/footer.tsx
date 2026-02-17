@@ -22,7 +22,9 @@ export function Footer() {
                   src="/logo-icon.jpg"
                   alt="THE MAC"
                   fill
-                className="object-contain object-left brightness-[0.85]"
+                  unoptimized
+                  sizes="192px"
+                  className="object-contain object-left brightness-[0.85]"
                 />
               </div>
 
@@ -30,7 +32,7 @@ export function Footer() {
                 <div>
                   <p className="text-xs text-teal-500/60 uppercase tracking-widest font-medium mb-2">Studio Address</p>
                   <p className="text-white/45 font-light text-sm leading-relaxed">
-                    Ahmedabad, Gujarat 380007
+                    C-503, Rajyash Rise NH64 Near Vishala Rajyash City, Vishala, Ahmedabad, Gujarat 380007
                   </p>
                 </div>
 

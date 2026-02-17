@@ -3,8 +3,9 @@ import { Hero } from '@/components/hero'
 import { Services } from '@/components/services'
 import { Portfolio } from '@/components/portfolio'
 import { Team } from '@/components/team'
-import { Testimonials } from '@/components/testimonials'
+
 import { Contact } from '@/components/contact'
+import { Testimonials } from '@/components/testimonials'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 

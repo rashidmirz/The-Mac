@@ -7,10 +7,10 @@ export function Testimonials() {
     { name: 'Safar Infrastructure', logo: '/logos/safar-infrastructure.png' },
     { name: 'Safar Enterprise', logo: '/logos/safar-enterprise.jpg' },
     { name: 'Arcksite Construction', logo: '/logos/arcksite-construction.jpg' },
-    { name: 'Jhatakia Construction', logo: '/logos/jhatakia-construction.svg' },
-    { name: 'A3 Projects', logo: '/logos/a3-projects.svg' },
-    { name: 'Paradise Nests', logo: '/logos/paradise-nests.svg' },
-    { name: 'Safar Aman', logo: '/logos/safar-aman.svg' },
+    { name: 'Jhatakia Construction', logo: '/logos/blank-logo.svg' },
+    { name: 'A3 Projects', logo: '/logos/blank-logo.svg' },
+    { name: 'Paradise Nests', logo: 'https://img.sanishtech.com/u/8eacdb4e6035d02f68b6e48d8c6acd5d.png' },
+    { name: 'Safar-e-Aman', logo: '/logos/safar-infrastructure.png' },
   ]
 
   return (
@@ -60,6 +60,7 @@ export function Testimonials() {
                       alt={client.name}
                       width={160}
                       height={80}
+                      unoptimized
                       className="object-contain max-h-20 w-auto group-hover:scale-105 transition-transform duration-500 brightness-[0.8] group-hover:brightness-100"
                     />
                   </div>

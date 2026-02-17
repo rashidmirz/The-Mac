@@ -8,78 +8,12 @@ export function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
   const [showAll, setShowAll] = useState(false)
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Modern Residential Interior',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-    },
-    {
-      id: 2,
-      title: 'Contemporary Living Space',
-      image: 'https://images.unsplash.com/photo-1600210174552-5ac1371e3b1d?w=800&q=80',
-    },
-    {
-      id: 3,
-      title: 'Luxury Bedroom Design',
-      image: 'https://images.unsplash.com/photo-1617325247661-675ab4b64ae0?w=800&q=80',
-    },
-    {
-      id: 4,
-      title: 'Modern Villa Exterior',
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
-    },
-    {
-      id: 5,
-      title: 'Urban Living Complex',
-      image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
-    },
-    {
-      id: 6,
-      title: 'Minimalist Interior Design',
-      image: 'https://images.unsplash.com/photo-1600210176138-13bddb0a1efb?w=800&q=80',
-    },
-    {
-      id: 7,
-      title: 'Contemporary Office Space',
-      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
-    },
-    {
-      id: 8,
-      title: 'Luxury Bathroom Suite',
-      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80',
-    },
-    {
-      id: 9,
-      title: 'Wooden Architecture Detail',
-      image: 'https://images.unsplash.com/photo-1600585154355-78ed5aae4d3b?w=800&q=80',
-    },
-    {
-      id: 10,
-      title: 'Elegant Dining Room',
-      image: 'https://images.unsplash.com/photo-1600573472550-8090b5e9e8c6?w=800&q=80',
-    },
-    {
-      id: 11,
-      title: 'Modern Kitchen Design',
-      image: 'https://images.unsplash.com/photo-1600566752376-12c8ab7d8a38?w=800&q=80',
-    },
-    {
-      id: 12,
-      title: 'Spa & Wellness Center',
-      image: 'https://images.unsplash.com/photo-1604329142231-39cd5e1b38f5?w=800&q=80',
-    },
-    {
-      id: 13,
-      title: 'Commercial Retail Space',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-    },
-    {
-      id: 14,
-      title: 'Boutique Hotel Lobby',
-      image: 'https://images.unsplash.com/photo-1600570152476-408d0d698e83?w=800&q=80',
-    },
-  ]
+  /* Updated to include 40 images (last 2 removed) */
+  const projects = Array.from({ length: 40 }, (_, i) => ({
+    id: i + 1,
+    title: `Project ${i + 1}`,
+    image: `/portfolio/project-${i + 1}.jpg`,
+  }))
 
   const displayedProjects = showAll ? projects : projects.slice(0, 8)
 
@@ -154,22 +88,11 @@ export function Portfolio() {
                 src={project.image}
                 alt={project.title}
                 fill
+                unoptimized
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 loading="lazy"
-                className="object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.6] group-hover:brightness-[0.5]"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all duration-500"></div>
-
-              {/* Title */}
-              <div className="absolute inset-0 flex items-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div>
-                  <div className="w-8 h-px bg-teal-500 mb-3 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                  <h3 className="text-white text-lg md:text-xl font-medium tracking-wide" style={{ fontWeight: 500 }}>
-                    {project.title}
-                  </h3>
-                </div>
-              </div>
 
               {/* Border glow on hover */}
               <div className="absolute inset-0 border border-transparent group-hover:border-teal-500/30 transition-all duration-500 rounded-sm"></div>
@@ -203,12 +126,7 @@ export function Portfolio() {
           </div>
         )}
 
-        {/* Project Count */}
-        <div className="text-center mt-8">
-          <p className="text-sm font-light tracking-widest text-teal-500/60">
-            {displayedProjects.length} OF {projects.length} PROJECTS
-          </p>
-        </div>
+
 
       </div>
     </section>

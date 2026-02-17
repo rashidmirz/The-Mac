@@ -213,7 +213,9 @@ export function Services() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  unoptimized
                   loading="lazy"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/85 group-hover:bg-black/80 transition-all duration-500"></div>

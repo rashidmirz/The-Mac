@@ -7,26 +7,50 @@ export function Clients() {
     {
       id: 1,
       name: 'Jhatakia Construction Company',
-      logo: '/logos/jhatakia-construction.svg',
+      logo: '/clients/client-1.jpg',
       alt: 'Jhatakia Construction',
     },
     {
       id: 2,
       name: 'A³ Projects',
-      logo: '/logos/a3-projects.svg',
+      logo: '/clients/client-2.png',
       alt: 'A3 Projects',
     },
     {
       id: 3,
       name: 'Paradise Nests',
-      logo: '/logos/paradise-nests.svg',
+      logo: '/clients/client-3.png',
       alt: 'Paradise Nests',
     },
     {
       id: 4,
-      name: 'Safari-aman',
-      logo: '/logos/safar-aman.svg',
-      alt: 'Safari-aman',
+      name: 'Safar-e-Aman',
+      logo: '/clients/client-4.jpg',
+      alt: 'Safar-e-Aman',
+    },
+    {
+      id: 5,
+      name: 'Visionary Partner',
+      logo: '/clients/client-1.jpg',
+      alt: 'Visionary Partner',
+    },
+    {
+      id: 6,
+      name: 'Strategic Alliance',
+      logo: '/clients/client-6.jpg',
+      alt: 'Strategic Alliance',
+    },
+    {
+      id: 7,
+      name: 'Future Concepts',
+      logo: '/clients/client-7.jpg',
+      alt: 'Future Concepts',
+    },
+    {
+      id: 8,
+      name: 'Architectural Design Studio',
+      logo: '/clients/client-8.png',
+      alt: 'Architectural Design Studio',
     },
   ]
 
@@ -66,7 +90,7 @@ export function Clients() {
             >
               {/* Card Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg"></div>
-              
+
               {/* Card */}
               <div className="relative bg-card/50 backdrop-blur-md border border-border rounded-lg p-8 h-60 flex items-center justify-center transition-all duration-500 group-hover:border-teal-500/30 group-hover:bg-card/80 group-hover:shadow-2xl group-hover:shadow-teal-500/10">
                 {/* Logo Container */}
@@ -76,6 +100,7 @@ export function Clients() {
                     alt={client.alt}
                     width={180}
                     height={180}
+                    unoptimized
                     className="object-contain w-auto h-auto max-w-[160px] max-h-[140px] transition-all duration-500 group-hover:scale-110 filter brightness-100 group-hover:drop-shadow-lg"
                     quality={95}
                     priority={false}
@@ -105,7 +130,7 @@ export function Clients() {
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="space-y-2">
-            <p className="text-3xl md:text-4xl font-light text-teal-500">4+</p>
+            <p className="text-3xl md:text-4xl font-light text-teal-500">8+</p>
             <p className="text-sm font-light tracking-wide text-foreground/60">PREMIUM CLIENTS</p>
           </div>
           <div className="space-y-2">

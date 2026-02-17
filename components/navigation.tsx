@@ -26,6 +26,7 @@ export function Navigation() {
             alt="THE MAC"
             width={200}
             height={200}
+            unoptimized
             className="object-contain h-12 sm:h-14 md:h-16 w-auto"
             priority
           />

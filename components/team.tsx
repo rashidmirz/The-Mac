@@ -89,6 +89,7 @@ export function Team() {
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
               alt="Our studio"
               fill
+              unoptimized
               className="object-cover border border-white/[0.06] brightness-[0.7]"
               sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
