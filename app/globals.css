@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Ivory & Warm Gold Classic Bright Architecture Theme */
+    --background: 40 25% 96%;
+    --foreground: 40 20% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 40 20% 18%;
+    --popover: 40 20% 99%;
+    --popover-foreground: 40 20% 18%;
+    --primary: 40 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 25% 92%;
+    --secondary-foreground: 40 20% 18%;
+    --muted: 40 30% 68%;
+    --muted-foreground: 40 20% 35%;
+    --accent: 40 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 25% 88%;
+    --input: 0 0% 100%;
+    --ring: 40 85% 55%;
+    --chart-1: 40 85% 55%;
+    --chart-2: 40 70% 65%;
+    --chart-3: 40 50% 78%;
+    --chart-4: 0 0% 88%;
+    --chart-5: 40 85% 45%;
+    --radius: 0.5rem;
+    --sidebar-background: 40 25% 96%;
+    --sidebar-foreground: 40 20% 18%;
+    --sidebar-primary: 40 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 85% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 40 25% 88%;
+    --sidebar-ring: 40 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-semibold tracking-wide;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* Luxury animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(220, 180, 80, 0.15), 0 0 8px rgba(220, 180, 80, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(220, 180, 80, 0.25), 0 0 12px rgba(220, 180, 80, 0.15);
+  }
+}
+
+@layer utilities {
+  .animate-fadeInUp {
+    @apply animate-in fade-in slide-in-from-bottom-5 duration-1000;
+  }
+  
+  .animate-slideInLeft {
+    @apply animate-in fade-in slide-in-from-left duration-1000;
+  }
+  
+  .luxury-text {
+    @apply text-foreground font-light;
+  }
+  
+  .gold-accent {
+    @apply text-accent;
+  }
+  
+  .gold-border {
+    @apply border-accent;
+  }
+  
+  .gold-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+  
+  /* Premium button styles */
+  .btn-accent {
+    @apply px-10 py-4 bg-accent text-black font-light text-sm tracking-widest uppercase border border-accent transition-all duration-500 hover:shadow-2xl hover:shadow-accent/60 hover:bg-accent/90 rounded-sm;
+  }
+  
+  .btn-outline {
+    @apply px-10 py-4 border-2 border-white text-white font-light text-sm tracking-widest uppercase transition-all duration-500 hover:bg-white hover:text-black rounded-sm;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-2xl hover:shadow-accent/30 hover:border-accent/60;
+  }
+  
+  /* Premium section spacing */
+  .section-padding {
+    @apply py-32 px-6;
+  }
+}
+
+/* Smooth scrolling enhancement */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
