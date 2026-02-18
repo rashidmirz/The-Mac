@@ -8,12 +8,19 @@ export function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
   const [showAll, setShowAll] = useState(false)
 
-  /* Updated to include 40 images (last 2 removed) */
-  const projects = Array.from({ length: 40 }, (_, i) => ({
+  /* Updated to include 40 images, with priority images shown first */
+  const allProjects = Array.from({ length: 40 }, (_, i) => ({
     id: i + 1,
     title: `Project ${i + 1}`,
     image: `/portfolio/project-${i + 1}.jpg`,
   }))
+
+  const priorityIds = [14, 15, 16, 17, 19, 20, 21, 25, 26, 27, 28, 29, 30]
+
+  const projects = [
+    ...allProjects.filter((p) => priorityIds.includes(p.id)),
+    ...allProjects.filter((p) => !priorityIds.includes(p.id)),
+  ]
 
   const displayedProjects = showAll ? projects : projects.slice(0, 8)
 
