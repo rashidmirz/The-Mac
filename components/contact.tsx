@@ -83,18 +83,6 @@ export function Contact() {
         </svg>
       ),
     },
-    {
-      label: 'Connect',
-      lines: ['LinkedIn'],
-      links: ['https://www.linkedin.com/in/the-mac-3573a1375?utm_source=share_via&utm_content=profile&utm_medium=member_ios'],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
-          <rect x="2" y="9" width="4" height="12" />
-          <circle cx="4" cy="4" r="2" />
-        </svg>
-      ),
-    },
   ]
 
   return (
@@ -337,17 +325,6 @@ export function Contact() {
               <h3 className="text-[10px] uppercase tracking-[0.2em] text-teal-500/40 group-hover:text-teal-500 font-light mb-4 transition-colors duration-500">Follow Us</h3>
               <div className="flex gap-4">
                 {[
-                  {
-                    name: 'LinkedIn',
-                    href: 'https://www.linkedin.com/in/the-mac-3573a1375?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
-                    icon: (
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5">
-                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
-                        <rect x="2" y="9" width="4" height="12" />
-                        <circle cx="4" cy="4" r="2" />
-                      </svg>
-                    ),
-                  },
                   {
                     name: 'Instagram',
                     href: 'https://www.instagram.com/themacofficial_/',

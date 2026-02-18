@@ -100,20 +100,7 @@ export function Footer() {
                     Instagram
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/the-mac-3573a1375?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-                    target="_blank"
-                    className="text-white/45 hover:text-teal-500 font-light transition-colors duration-300 text-sm flex items-center gap-3 group"
-                  >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4 text-teal-500/30 group-hover:text-teal-500 transition-colors duration-300">
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                      <rect x="2" y="9" width="4" height="12"></rect>
-                      <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </li>
+                {/* LinkedIn removed */}
               </ul>
             </div>
 
