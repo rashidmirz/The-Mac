@@ -326,6 +326,17 @@ export function Contact() {
               <div className="flex gap-4">
                 {[
                   {
+                    name: 'LinkedIn',
+                    href: 'https://www.linkedin.com/in/the-mac-3573a1375?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
+                    ),
+                  },
+                  {
                     name: 'Instagram',
                     href: 'https://www.instagram.com/themacofficial_/',
                     icon: (
