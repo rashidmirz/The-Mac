@@ -180,27 +180,25 @@ export function Contact() {
                   {/* Name & Email Row */}
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-teal-500/50 font-light mb-2">Full Name *</label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        placeholder="John Doe"
-                        className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/20 outline-none transition-all duration-300 focus:bg-white/[0.05] focus:shadow-lg focus:shadow-teal-500/[0.03]"
+                        placeholder="The Mac"
+                        className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/40 outline-none transition-all duration-300 focus:bg-white/[0.05] focus:shadow-lg focus:shadow-teal-500/[0.03]"
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-teal-500/50 font-light mb-2">Email Address *</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="john@example.com"
-                        className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/20 outline-none transition-all duration-300 focus:bg-white/[0.05] focus:shadow-lg focus:shadow-teal-500/[0.03]"
+                        placeholder="themac@example.com"
+                        className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/40 outline-none transition-all duration-300 focus:bg-white/[0.05] focus:shadow-lg focus:shadow-teal-500/[0.03]"
                       />
                     </div>
                   </div>
@@ -208,18 +206,16 @@ export function Contact() {
                   {/* Phone & Service Row */}
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-teal-500/50 font-light mb-2">Phone Number</label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+91 98765 43210"
-                        className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/20 outline-none transition-all duration-300 focus:bg-white/[0.05] focus:shadow-lg focus:shadow-teal-500/[0.03]"
+                        placeholder="+91 95105 84343"
+                        className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/40 outline-none transition-all duration-300 focus:bg-white/[0.05] focus:shadow-lg focus:shadow-teal-500/[0.03]"
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-teal-500/50 font-light mb-2">Service Required</label>
                       <select
                         name="service"
                         value={formData.service}
@@ -242,7 +238,6 @@ export function Contact() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-[10px] uppercase tracking-[0.2em] text-teal-500/50 font-light mb-2">Project Details *</label>
                     <textarea
                       name="message"
                       value={formData.message}
@@ -250,7 +245,7 @@ export function Contact() {
                       required
                       rows={4}
                       placeholder="Tell us about your project — type, area, budget range, timeline..."
-                      className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/20 outline-none transition-all duration-300 focus:bg-white/[0.05] resize-none focus:shadow-lg focus:shadow-teal-500/[0.03]"
+                      className="w-full bg-white/[0.03] border border-white/[0.08] focus:border-teal-500/50 rounded-sm px-4 py-3.5 text-sm text-white/80 font-light placeholder:text-white/40 outline-none transition-all duration-300 focus:bg-white/[0.05] resize-none focus:shadow-lg focus:shadow-teal-500/[0.03]"
                     />
                   </div>
 
