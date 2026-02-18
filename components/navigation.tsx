@@ -20,7 +20,7 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-xl z-50 border-b border-white/20 shadow-lg shadow-black/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between md:justify-center md:gap-12">
-        <Link href="#" className="flex items-center gap-3 sm:gap-4 group flex-shrink-0">
+        <Link href="/" className="flex items-center gap-3 sm:gap-4 group flex-shrink-0">
           <Image
             src="/logo-icon.jpg"
             alt="THE MAC"

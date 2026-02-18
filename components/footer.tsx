@@ -17,7 +17,8 @@ export function Footer() {
             {/* Column 1 — Logo & Address */}
             <div className="space-y-8">
               {/* Logo */}
-              <div className="relative w-48 h-16">
+              {/* Logo */}
+              <Link href="/" className="block relative w-48 h-16">
                 <Image
                   src="/logo-icon.jpg"
                   alt="THE MAC"
@@ -26,7 +27,7 @@ export function Footer() {
                   sizes="192px"
                   className="object-contain object-left brightness-[0.85]"
                 />
-              </div>
+              </Link>
 
               <div className="space-y-4">
                 <div>
