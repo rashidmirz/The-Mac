@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   title: 'THE MAC | Modern Architectural Concept — Ahmedabad',
   description: 'THE MAC — Modern Architectural Concept. Premium architecture, interior design, and construction services in Ahmedabad. Transform your vision into reality.',
   generator: 'v0.app',
+  icons: {
+    icon: '/logo-icon.jpg',
+    apple: '/logo-icon.jpg',
+  },
 }
 
 export const viewport: Viewport = {
