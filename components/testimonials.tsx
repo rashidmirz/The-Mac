@@ -7,10 +7,10 @@ export function Testimonials() {
     { name: 'Safar Infrastructure', logo: '/logos/safar-infrastructure.png' },
     { name: 'Safar Enterprise', logo: '/logos/safar-enterprise.jpg' },
     { name: 'Arcksite Construction', logo: '/logos/arcksite-construction.jpg' },
-    { name: 'Jhatakia Construction', logo: '/logos/blank-logo.svg' },
-    { name: 'A3 Projects', logo: '/logos/blank-logo.svg' },
-    { name: 'Paradise Nests', logo: 'https://img.sanishtech.com/u/8eacdb4e6035d02f68b6e48d8c6acd5d.png' },
-    { name: 'Safar-e-Aman', logo: '/logos/safar-infrastructure.png' },
+    { name: 'Jhatakia Construction', logo: '/logos/client-6.jpg' },
+    { name: 'A3 Projects', logo: '/logos/client-7.jpg' },
+    { name: 'Paradise Nests', logo: '/logos/paradise.png' },
+    { name: 'Safar-e-Aman', logo: '/logos/client-4.png' },
   ]
 
   return (

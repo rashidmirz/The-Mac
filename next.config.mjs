@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'img.sanishtech.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'adequate-red-40mmmaefbo.edgeone.app',
+      },
     ],
   },
 }

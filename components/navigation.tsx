@@ -30,9 +30,9 @@ export function Navigation() {
             className="object-contain h-12 sm:h-14 md:h-16 w-auto"
             priority
           />
-          <div className="hidden sm:flex flex-col">
-            <span className="text-lg md:text-xl font-bold tracking-wider text-white" style={{ fontWeight: 700 }}>THE MAC</span>
-            <span className="text-[10px] font-light tracking-widest text-white/50 uppercase">Modern Architectural Concept</span>
+          <div className="flex flex-col">
+            <span className="text-sm sm:text-lg md:text-xl font-bold tracking-wider text-white" style={{ fontWeight: 700 }}>THE MAC</span>
+            <span className="text-[7px] sm:text-[10px] font-light tracking-widest text-white/50 uppercase leading-tight">Modern Architectural Concept</span>
           </div>
         </Link>
 

@@ -140,6 +140,8 @@ export function Services() {
     },
   ]
 
+  const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null)
+
   return (
     <section id="services" className="relative py-20 md:py-32 px-4 sm:px-6 bg-[#030303] overflow-hidden noise-overlay">
       {/* Background Image — Ultra Dark */}
@@ -181,7 +183,7 @@ export function Services() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="space-y-6 mb-20">
+        <div className="space-y-6 mb-20 text-center md:text-left">
           <div className="inline-block px-6 py-3 border border-teal-500/30 rounded-full bg-teal-500/[0.03] backdrop-blur-sm">
             <span className="text-xs font-light tracking-widest text-teal-500">✦ OUR EXPERTISE ✦</span>
           </div>
@@ -193,7 +195,7 @@ export function Services() {
               Services
             </h2>
           </div>
-          <p className="text-base text-white/50 font-light max-w-3xl leading-relaxed">
+          <p className="text-base text-white/50 font-light max-w-3xl leading-relaxed mx-auto md:mx-0">
             We deliver end-to-end architectural and design solutions — from initial concept sketches to final construction documentation. Every project reflects precision, creativity, and excellence.
           </p>
         </div>
@@ -205,24 +207,23 @@ export function Services() {
               key={index}
               onMouseEnter={() => setHoveredService(index)}
               onMouseLeave={() => setHoveredService(null)}
-              className="group relative overflow-hidden rounded-sm bg-[#080808] border border-white/[0.06] hover:border-teal-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-teal-500/[0.06]"
+              className="group relative overflow-hidden rounded-sm bg-[#080808] border border-white/[0.06] hover:border-teal-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-teal-500/[0.06] flex flex-col h-full"
             >
               {/* Background Image */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+              <div className={`absolute inset-0 transition-opacity duration-500 z-0 ${hoveredService === index ? 'opacity-100' : 'opacity-0'}`}>
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   unoptimized
-                  loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/85 group-hover:bg-black/80 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-black/90 group-hover:bg-black/85 transition-all duration-500"></div>
               </div>
 
               {/* Content */}
-              <div className="relative z-10 p-8">
+              <div className="relative z-10 p-8 flex flex-col flex-grow">
                 {/* Top Row */}
                 <div className="flex items-center justify-between mb-5">
                   <div className="w-14 h-14 rounded-full border border-teal-500/20 group-hover:border-teal-500/50 flex items-center justify-center text-teal-500/40 group-hover:text-teal-500 group-hover:scale-110 transition-all duration-500 bg-teal-500/[0.03] group-hover:bg-teal-500/[0.08]">
@@ -239,7 +240,7 @@ export function Services() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-white/40 font-light leading-relaxed mb-5">
+                <p className="text-sm text-white/40 font-light leading-relaxed mb-5 flex-grow">
                   {service.description}
                 </p>
 
@@ -256,23 +257,20 @@ export function Services() {
                 </div>
 
                 {/* CTA Arrow */}
-                <div className="inline-flex items-center gap-2 text-xs font-light text-teal-500/50 group-hover:text-teal-500 transition-all duration-500 uppercase tracking-widest">
+                <button
+                  onClick={() => setSelectedService(service)}
+                  className="inline-flex items-center gap-2 text-xs font-light text-teal-500/50 group-hover:text-teal-500 transition-all duration-500 uppercase tracking-widest cursor-pointer mt-auto"
+                >
                   <span>Learn More</span>
                   <svg
-                    className={`w-4 h-4 transition-all duration-500 ${hoveredService === index ? 'translate-x-2' : ''
-                      }`}
+                    className={`w-4 h-4 transition-transform duration-500 ${hoveredService === index ? 'translate-x-2' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </div>
+                </button>
 
                 {/* Border Accent */}
                 <div className="absolute top-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-teal-500/60 to-transparent transition-all duration-700"></div>
@@ -285,10 +283,103 @@ export function Services() {
         {/* Bottom CTA */}
         <div className="text-center border-t border-white/[0.06] pt-16">
           <p className="text-white/50 font-light mb-6">Ready to start your next architectural project?</p>
-          <a href="#contact" className="group px-8 py-4 bg-teal-500 text-white font-light text-sm tracking-widest hover:bg-teal-500/90 transition-all duration-500 uppercase border border-teal-500 relative overflow-hidden">
+          <a href="#contact" className="group px-8 py-4 bg-teal-500 text-white font-light text-sm tracking-widest hover:bg-teal-500/90 transition-all duration-500 uppercase border border-teal-500 relative overflow-hidden inline-block">
             <span className="relative z-10">Consult Our Experts</span>
             <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
           </a>
+        </div>
+      </div>
+
+      {/* Slide-over Service Detail Panel */}
+      <div
+        className={`fixed inset-0 z-[60] transition-all duration-500 ${selectedService ? 'visible' : 'invisible pointer-events-none'}`}
+      >
+        {/* Backdrop */}
+        <div
+          className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-500 ${selectedService ? 'opacity-100' : 'opacity-0'}`}
+          onClick={() => setSelectedService(null)}
+        />
+
+        {/* Panel */}
+        <div
+          className={`absolute top-0 right-0 h-full w-full md:w-[600px] bg-[#0A0A0A] border-l border-white/10 shadow-2xl shadow-black transform transition-transform duration-500 overflow-y-auto ${selectedService ? 'translate-x-0' : 'translate-x-full'}`}
+        >
+          {selectedService && (
+            <div className="relative min-h-full">
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedService(null)}
+                className="absolute top-6 right-6 z-20 p-2 text-white/50 hover:text-white bg-black/50 hover:bg-black/80 rounded-full transition-colors backdrop-blur-md"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {/* Hero Image */}
+              <div className="relative h-64 md:h-80 w-full">
+                <Image
+                  src={selectedService.image}
+                  alt={selectedService.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent"></div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 md:p-12 space-y-8">
+                <div>
+                  <div className="text-teal-500 text-sm font-bold tracking-widest mb-2 uppercase">{selectedService.number} — Service Detail</div>
+                  <h3 className="text-3xl md:text-4xl font-light text-white mb-6">{selectedService.title}</h3>
+                  <div className="h-1 w-20 bg-teal-500 rounded-full"></div>
+                </div>
+
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-white/70 font-light text-lg leading-relaxed">
+                    {selectedService.description}
+                  </p>
+
+                  <p className="text-white/50 font-light leading-relaxed mt-4">
+                    At The MAC, our {selectedService.title} service is designed to meet the highest standards of precision and creativity. We understand that every project requires a unique approach, which is why we meticulously cater to specific requirements while adhering to global architectural trends.
+                  </p>
+
+                  <h4 className="text-white text-xl font-normal mt-8 mb-4">What We Offer</h4>
+                  <ul className="space-y-4">
+                    {selectedService.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-4">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-500 mt-1">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <span className="text-white/70 font-light">{feature} - Expert implementation with focus on quality and durability.</span>
+                      </li>
+                    ))}
+                    <li className="flex items-start gap-4">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-500 mt-1">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span className="text-white/70 font-light">Customized solutions tailored to your specific architectural needs.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pt-8 border-t border-white/10 mt-8">
+                  <h4 className="text-white text-lg font-normal mb-4">Interested in this service?</h4>
+                  <a
+                    href="#contact"
+                    onClick={() => setSelectedService(null)}
+                    className="inline-block w-full text-center px-8 py-4 bg-teal-500 text-white font-medium text-sm tracking-widest hover:bg-teal-600 transition-colors uppercase rounded-sm"
+                  >
+                    Request a Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

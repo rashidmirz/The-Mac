@@ -7,51 +7,47 @@ export function Clients() {
     {
       id: 1,
       name: 'Jhatakia Construction Company',
-      logo: '/clients/client-1.jpg',
+      logo: '/logos/client-1.jpg',
       alt: 'Jhatakia Construction',
     },
     {
       id: 2,
       name: 'A³ Projects',
-      logo: '/clients/client-2.png',
+      logo: '/logos/client-2.png',
       alt: 'A3 Projects',
     },
+
     {
       id: 3,
       name: 'Paradise Nests',
-      logo: '/clients/client-3.png',
+      logo: '/logos/client-3.png',
       alt: 'Paradise Nests',
     },
     {
       id: 4,
       name: 'Safar-e-Aman',
-      logo: '/clients/client-4.jpg',
+      logo: '/logos/client-4.png',
       alt: 'Safar-e-Aman',
     },
     {
       id: 5,
       name: 'Visionary Partner',
-      logo: '/clients/client-1.jpg',
+      logo: '/logos/client-5.jpg',
       alt: 'Visionary Partner',
     },
     {
       id: 6,
       name: 'Strategic Alliance',
-      logo: '/clients/client-6.jpg',
+      logo: '/logos/client-6.jpg',
       alt: 'Strategic Alliance',
     },
     {
       id: 7,
       name: 'Future Concepts',
-      logo: '/clients/client-7.jpg',
+      logo: '/logos/client-7.jpg',
       alt: 'Future Concepts',
     },
-    {
-      id: 8,
-      name: 'Architectural Design Studio',
-      logo: '/clients/client-8.png',
-      alt: 'Architectural Design Studio',
-    },
+
   ]
 
   return (
@@ -92,26 +88,24 @@ export function Clients() {
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg"></div>
 
               {/* Card */}
-              <div className="relative bg-card/50 backdrop-blur-md border border-border rounded-lg p-8 h-60 flex items-center justify-center transition-all duration-500 group-hover:border-teal-500/30 group-hover:bg-card/80 group-hover:shadow-2xl group-hover:shadow-teal-500/10">
-                {/* Logo Container */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
+              <div className="relative bg-card/50 backdrop-blur-md border border-border rounded-lg p-8 h-80 flex flex-col items-center justify-center gap-6 transition-all duration-500 group-hover:border-teal-500/30 group-hover:bg-card/80 group-hover:shadow-2xl group-hover:shadow-teal-500/10">
+
+                {/* Logo Section */}
+                <div className="relative w-full h-36 flex items-center justify-center">
+                  <img
                     src={client.logo}
+                    width="200"
+                    height="100"
                     alt={client.alt}
-                    width={180}
-                    height={180}
-                    unoptimized
-                    className="object-contain w-auto h-auto max-w-[160px] max-h-[140px] transition-all duration-500 group-hover:scale-110 filter brightness-100 group-hover:drop-shadow-lg"
-                    quality={95}
-                    priority={false}
+                    className="object-contain max-h-full max-w-full bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-all duration-300"
                   />
                 </div>
 
-                {/* Hover Overlay - Client Name */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-4">
-                  <p className="text-sm font-light tracking-wide text-teal-500 text-center">
+                {/* Name Section */}
+                <div className="text-center w-full relative z-10">
+                  <h3 className="text-lg font-light tracking-wide text-foreground/80 group-hover:text-teal-500 transition-colors duration-300">
                     {client.name}
-                  </p>
+                  </h3>
                 </div>
 
                 {/* Accent Border Glow */}
